@@ -8,7 +8,7 @@ namespace AOPTest
         {
             Console.WriteLine("***\r\n Begin program - no logging\r\n");
             IRepository<Customer> customerRepository =
-                new LoggerRepository<Customer>(new Repository<Customer>());
+                RepositoryFactory.Create<Customer>();
             var customer = new Customer
             {
                 Id = 1,
